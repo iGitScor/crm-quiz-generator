@@ -1,0 +1,48 @@
+<div [formGroup]="form">
+  <label class="title-block" [attr.for]="question.key">
+    {{ question.label }} <span class="oblig" *ngIf="question.required">*</span>
+  </label>
+
+  <div class="form-group" [ngSwitch]="question.controlType">
+
+    <input
+      class="form-control"
+      #field
+      *ngSwitchCase="'textbox'"
+      [formControlName]="question.key"
+      [id]="question.key"
+      [type]="question.type"
+      (change)="submit(field.value)">
+
+    <div *ngSwitchCase="'multitextbox'">
+      <div *ngFor="let opt of question.options">
+        <label class="col-md-4 col-xs-6">{{ opt.label }}</label>
+        <input
+          class="col-md-4 col-md-offset-4 col-xs-6 text-center"
+          #field
+          [type]="opt.type"
+          [min]="opt.min"
+          [max]="opt.max"
+          (change)="submit(field.value, opt)">
+      </div>
+    </div>
+
+    <div class="btn-group" data-toggle="buttons" *ngSwitchCase="'radio'">
+      <label
+        type="radio"
+        class="btn btn-secondary btn-block"
+        [class.selected-item]="question.value == input.value"
+        [class.active]="question.value == input.value"
+        *ngFor="let input of question.options"
+        (click)="submit(input.value)">
+        {{ input.label }}
+        <input type="radio" [id]="question.key" [formControlName]="question.key" [value]="input.value">
+      </label>
+    </div>
+
+  </div>
+
+  <ng-content></ng-content>
+
+  <!-- <div class="errorMessage" *ngIf="isInvalid && isTouched">{{ question.label }} est requis</div> -->
+</div>
