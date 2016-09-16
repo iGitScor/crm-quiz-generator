@@ -1,6 +1,21 @@
 {
   "name": "crm-quiz-generator",
   "version": "1.0.0",
+  "license": "MIT",
+  "description": "Dynamic quiz tool to get user data",
+  "keywords": [
+    "crm",
+    "dynamic form"
+  ],
+  "repository": {
+      "type": "git",
+      "url": "git@github.com:iGitScor/crm-quiz-generator.git"
+  },
+  "bugs": "https://github.com/iGitScor/crm-quiz-generator/issues",
+  "author": "iGitScor <sebastien.correaud@gmail.com> (http://iscor.me)",
+  "contributors": [
+    "iGitScor <sebastien.correaud@gmail.com> (http://iscor.me)"
+  ],
   "scripts": {
     "deploy": "node ./config/gh-deploy.js",
     "serve": "bundle exec jekyll serve",
@@ -9,7 +24,6 @@
     "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
     "postinstall": "typings install"
   },
-  "license": "MIT",
   "dependencies": {
     "@angular/common": "2.0.0-rc.6",
     "@angular/compiler": "2.0.0-rc.6",
@@ -48,5 +62,8 @@
     "webpack": "^1.13.0",
     "webpack-dev-server": "^1.14.1",
     "webpack-merge": "^0.14.0"
+  },
+  "engines": {
+    "node": ">=0.12"
   }
 }
