@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "description": "Dynamic quiz tool to get user data",
+  "homepage": "http://iscor.me/crm-quiz-generator/docs/",
   "keywords": [
     "crm",
     "dynamic form"
