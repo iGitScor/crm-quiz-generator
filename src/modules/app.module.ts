@@ -6,7 +6,7 @@ import { AppComponent }                 from './components/app/app.component';
 import { DynamicFormComponent }         from './components/dynamic-form/dynamic-form.component';
 import { DynamicFormQuestionComponent } from './components/dynamic-form-question/dynamic-form-question.component';
 
-import '../../public/css/style.css';
+import '../style/main.scss';
 
 @NgModule({
   imports: [

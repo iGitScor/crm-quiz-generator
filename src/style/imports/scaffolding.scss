@@ -1,0 +1,17 @@
+/* SCAFFOLDING */
+
+html,
+body {
+    height: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
+    margin-bottom: -90px;
+}
+
+.wrapper::after {
+    content: '';
+    display: block;
+    height: 90px;
+}
