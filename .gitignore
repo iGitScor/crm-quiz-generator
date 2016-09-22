@@ -1,4 +1,5 @@
 demo/
-docs/
-!docs/template
+docs/tool
+docs/css
+docs/index.html
 node_modules/
