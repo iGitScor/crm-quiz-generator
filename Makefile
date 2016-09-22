@@ -79,5 +79,5 @@ build-application:
 deploy: documentation deploy-application
 
 deploy-application:
-	build-application
+	make build-application
 	node ./config/gh-deploy.js

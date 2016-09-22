@@ -5,7 +5,8 @@ ghpages.publish(
   path.join(__dirname, '..'),
   {
     src: [
-      'docs/**/*',
+      'docs/index.html',
+      'docs/css/**/*',
       'demo/**/*',
     ],
     message: 'Automatic deployment update',
