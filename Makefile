@@ -58,9 +58,7 @@ update-deps: install-submodules
 
 ## Generate documentation
 documentation:
-	gulp --gulpfile docs/tool/gulpfile.js tpl
-	gulp --gulpfile docs/tool/gulpfile.js style
-	gulp --gulpfile docs/tool/gulpfile.js img
+	gulp --gulpfile docs/tool/gulpfile.js generate
 
 ##########
 # Build  #
