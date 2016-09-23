@@ -19,7 +19,7 @@ export class QuestionService {
           {value: 'F',  label: 'Femme'},
           {value: 'M',  label: 'Homme'},
         ],
-        required: false,
+        required: true,
         order: 1
       }),
 
@@ -39,14 +39,16 @@ export class QuestionService {
         key: 'firstName',
         label: 'Votre prénom',
         required: true,
-        order: 3
+        order: 3,
+        last: false
       }),
 
       new TextboxQuestion({
         key: 'lastName',
         label: 'Votre nom',
         required: true,
-        order: 3
+        order: 3,
+        last: true
       }),
 
       new TextboxQuestion({

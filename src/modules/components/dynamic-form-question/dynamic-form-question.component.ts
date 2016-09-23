@@ -36,7 +36,5 @@ export class DynamicFormQuestionComponent {
     } else {
       this.question.value = value;
     }
-
-    console.log(this.form);
   }
 }

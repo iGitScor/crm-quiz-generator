@@ -3,8 +3,8 @@
 
     <div *ngFor="let question of questions" class="form-row">
       <df-question [question]="question" [form]="form" *ngIf="question.order === step">
-        <div class="submit-row">
-          <button class="btn btn-link button-next" [disabled]="question.value == null" (click)="step = step + 1">
+        <div class="submit-row" *ngIf="question.last">
+          <button class="btn btn-link button-next" [disabled]="question.required && question.value == null" (click)="step = step + 1">
             Suivant ▶
           </button>
           <br>
@@ -26,7 +26,9 @@
           <circle class="spin" fill="none" stroke="#7DB0D5" stroke-width="4" stroke-miterlimit="10" stroke-dasharray="12.2175,12.2175" cx="80.6" cy="80.6" r="73.9"/>
         </svg>
       </div>
-      <button type="submit" class="btn btn-success" (click)="onSubmit()">Save</button>
+      <p class="panel-body">
+        <button type="submit" class="btn btn-success">Save</button>
+      </p>
     </div>
   </form>
 </div>
