@@ -26,7 +26,7 @@ help:
 ###########
 
 ## Install application
-install: install-deps install-scaffolding
+install: install-deps
 
 ## Install dependencies
 install-deps: install-npm install-submodules
@@ -39,11 +39,6 @@ install-npm:
 install-submodules:
 	git submodule foreach git pull origin master
 	git submodule foreach npm install
-
-## Install scaffolding
-install-scaffolding:
-	cd template-docs
-	npm install
 
 ##########
 # Update #
